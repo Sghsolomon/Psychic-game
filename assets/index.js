@@ -1,15 +1,21 @@
+
+
+
+
 var wins = 0;
 var loses = 0;
 var guesses = 8;
 
-var letters = ['a', 'c', 'e', 'g', 'h', 'j', 'l', 'n', 'p', 'k'];
+var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
 
-function noug(){}
+
 
 document.onkeyup = function(){
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    console.log(userGuess);
     var computerGuess =   letters[Math.floor(Math.random() * letters.length)];
+    console.log(computerGuess);
     if(guesses == 0){
         guesses +=  8;
     }
@@ -21,6 +27,7 @@ document.onkeyup = function(){
 
     if(userGuess == computerGuess){
         wins++;
+        guesses = 8;
         document.getElementById('win').innerHTML =  wins;
     }  if(userGuess !== computerGuess && guesses == 0){
         loses++;

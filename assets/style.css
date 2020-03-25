@@ -1,3 +1,18 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    background: linear-gradient(90deg, teal, blue);
+}
+
+
+#wrapper {
+    font-weight: 300;
+}
+
 p {
     display: inline;
     padding: 5px;
