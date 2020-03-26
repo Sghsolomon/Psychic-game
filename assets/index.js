@@ -33,6 +33,6 @@ document.onkeyup = function(){
         loses++;
         document.getElementById('lose').innerHTML =  loses;
     }
-    document.getElementById('key').innerHTML =   userGuess;
+    document.getElementById('key').innerHTML  +=  ', '+ userGuess;
 
 }
